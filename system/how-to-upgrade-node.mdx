@@ -1,0 +1,50 @@
+# how to upgrade and ACTIVATE versions of Node.Js and other programs on linux
+
+It is time.  You probably got an error like this: 
+
+""
+
+or like this:
+
+""
+
+or maybe one of your peers saw your version number and looked at you like this:
+
+For whatever reason, you need to upgrade Node.js and your having some problems.
+
+Here's what worked for me:
+
+## 1. Check current version
+
+Well, first, check your current version:
+
+`node -v`
+
+## Download and install 'n' to manage
+
+Now, because managine node versions can be a pain, someone made a program called 'n' that makes the process easier.  Open up a terminal in your computer's home directory and run this to download 'n' and install it globally:
+
+`npm install -g n`
+
+Now use **n** to get the latest version of node
+
+`n latest`
+
+At this point, you may get a succes message saying that you've installed node - but your problems might not be fixed yet. Close your terminal, and open another, then try running `node -v` again to see what version is being used.
+
+This is because **n** installs the package, but it is not in the directory that your computer is using.  If you run `n latest` again, you will see a message like this:
+
+```
+   installed : v20.1.1 to /installed/location/n/bin/node
+      active : v12.14.1 at /active/location/bin/node
+```
+
+copy the contents of the installed location to the active location using:
+
+` cp /installed/location/n/bin/node /active/location/bin/node`
+
+now check `node -v` and the update should be complete!
+
+ 
+
+

@@ -1,0 +1,71 @@
+# How to Get Started With Git 
+Git is a version control system for code that standardizes how updates to a directory are updated and saved over time. Instead of clicking "Save As" and then naming an updated file "index-temp-02" to indicate progress made that might not be ready to be implemented fully, Git provides a mechanism for working on individual branches, saving those branches, and then merging those branches with the main branch when it is ready to do so.
+
+## What is Git?
+
+-version control for code
+
+
+
+## Inatalling Git
+
+### Linux
+[coming soon]
+### Mac 
+[coming soon]
+### Windows
+[coming soon]
+#
+## VIP Workflow: New Repo
+### 1. CREATE REPO 
+- log in to github.com
+- click "create new repo"
+- answer prompts, etc 
+- once created, COPY the URL on the main page of repo 
+### 2. CREATE GIT LOCALLY
+- in top level of existing project:        
+    - `git init`
+- change name of primary branch to 'main':
+    - `git branch -m main`
+### 3. CREATE FIRST COMMIT 
+- ADD All Changes to Staging Area:
+    - `git add .` or `git add -A`
+    - these are 'staged', but not committed yet
+- COMMIT Staged Changes with Message:
+    -  `git commit -m 'first commit'`
+    
+### 4. LINK LOCAL GIT TO REPO ON GITHUB
+- Using URL from step 1, run: `git remote add origin <URL-from-step-1>`
+
+### 5. PUSH!
+- `git push -u origin main`  
+
+#
+## VIP Workflow: Save Progress
+### 1. Add Updates to Staging Area
+- `git add -A` (adds all updates in entire repo)
+- or `git add .` (adds all updates from current directory)
+### 2. Commit Staged Changes with Message
+-  `git commit -m 'updated readme documentation'`
+### 3. Push Changes (default to main branch)
+-  `git push`
+#
+## VIP Git Commands
+Initialize git in the current directory:
+`git init`
+
+Create new directory and start git:
+`git init exampleproj`
+
+Add all directories: `git add .`
+- directories that are 'added' are staged for commit but have not yet been committed!
+
+Create commit with message: `git commit -m 'first commit for blog'`
+- changes that are 'committed' are finalized locally and ready final step!
+
+
+
+
+
+
+
