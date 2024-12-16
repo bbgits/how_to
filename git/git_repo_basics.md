@@ -187,8 +187,42 @@ GIT - GETTING STARTED
    
    `firebase deploy --only functions`
 
+
+
+## Concepts
+"Head" branch - this is the active branch.  There can only be one at a time.
+
+### Branches
+#### Create New Branch
+`git branch new-branch-name` - creates new branch named 'new-branch-name'.  Without other parameters, git assumes you want to create from currently checked out revision.
+
+`git branch other-branch idxxxx` - create's new branch from commit idxxxx
+
+
+#### Switching Branches
+`git checkout <existing-branch>` - checks out an existing branch (i.e., makes the other branch the 'Head" branch. (i.e., the branch that shows up when  you run `git status`))
+
+`git switch <exhisting-branch>` - more specific command for switching.  Similar to checkout.
+
+#### Rennaming Branches
+rename current (head) branch: `git branch -m better-branch-name`  
+rename non-head branch: `git branch -m old-branch-name new-branch-name`
+
+#### Publishing Branches
+Can't really create a new branch on a remote repository.  But we can publish an existing local branch to the remote server, therby sharing with our team.
+
+`git push -u origin new-branch-name` - Upload a new branch.  The '-u' flag creates tracking.
+
+**Tracking Branches** - Local and remote branches are technically different, but they often have a relatiuonship.  Typically a local branch where you are working will "track" the remote branch.  When a trackign relationship is set up, you can use git pull and git push more easily.
+
+
+
+
+
 ### Links
 
 Github Repo:
 
 I would love ANY feedback: Feedback Form
+
+
